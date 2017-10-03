@@ -1,0 +1,15 @@
+/*-----------------------------------------------
+	Calculates the width of each column
+	based on the number of columns and 
+	gutter
+-----------------------------------------------*/
+
+
+@function collumn-width($columnCount, $gutter ) {
+
+	$newCollumnCount: ($columnCount - 1); // -1 Because the last one has no gutter
+
+	$totalGutter: ($newColumnCount * $gutter);
+
+	@return (100% - $totalGutter) / $columnCount;
+}
